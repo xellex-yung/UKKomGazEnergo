@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
+﻿
 namespace UKKomGazEnergo
 {
-    interface IProductRepository
+    public interface IProductRepository
     {
+        Product[] GetAllByTitle(string titlePart);
     }
 }
