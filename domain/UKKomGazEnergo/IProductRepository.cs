@@ -3,6 +3,7 @@ namespace UKKomGazEnergo
 {
     public interface IProductRepository
     {
-        Product[] GetAllByTitle(string titlePart);
+        Product[] GetAllByCountry(string titlePart);
+        Product[] GetAllByTitleOrManufacturer(string titlePart);
     }
 }
