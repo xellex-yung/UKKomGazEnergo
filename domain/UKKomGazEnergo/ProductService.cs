@@ -12,12 +12,8 @@ namespace UKKomGazEnergo
         {
             this.productRepository = productRepository;
         }
-
         public Product[] GetAllByQuery(string query)
-        {
-            //if (Product.IsCountry(query))
-            //    return productRepository.GetAllByCountry(query);
-
+        {      
             return productRepository.GetAllByTitleOrManufacturerOrCountry(query);
 
         }
