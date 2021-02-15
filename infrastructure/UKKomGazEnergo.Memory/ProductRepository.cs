@@ -10,15 +10,14 @@ namespace UKKomGazEnergo.Memory
             new Product(2,"country2","Manufacturer8","TwoSomeThing"),
             new Product(3,"country3","Manufacturer7","ThreeSomeThing"),
         };
-
-        public Product[] GetAllByCountry(string titlePart)
+        
+        public Product[] GetAllByTitleOrManufacturerOrCountry(string titlePart)
         {
-            throw new System.NotImplementedException();
-        }
-
-        public Product[] GetAllByTitleOrManufacturer(string titlePart)
-        {
-            return products.Where(products => products.Title.Contains(titlePart)).ToArray();
-        }
+            return products.Where(product => product.Title.Contains(titlePart) 
+                                           || product.Manufacturer.Contains(titlePart)
+                                           || product.Country.Contains(titlePart))
+                            .ToArray();
+                                                       
+        }    
     }
 }

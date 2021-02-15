@@ -15,10 +15,10 @@ namespace UKKomGazEnergo
 
         public Product[] GetAllByQuery(string query)
         {
-            if (IsCountry(query))
-                return productRepository.GetAllByCountry(query);
+            //if (Product.IsCountry(query))
+            //    return productRepository.GetAllByCountry(query);
 
-            return productRepository.GetAllByTitleOrManufacturer(query);
+            return productRepository.GetAllByTitleOrManufacturerOrCountry(query);
 
         }
     }
