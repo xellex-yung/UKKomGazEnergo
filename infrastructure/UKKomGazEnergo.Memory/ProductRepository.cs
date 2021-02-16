@@ -10,7 +10,7 @@ namespace UKKomGazEnergo.Memory
             new Product(2,"country2","Manufacturer2","TwoSomeThing","desc2",0.10m),
             new Product(3,"country3","Manufacturer3","ThreeSomeThing","desc1",0.4m),
         };
-        public int MyProperty { get; set; }
+     
         public Product[] GetAllByTitleOrManufacturerOrCountry(string titlePart)
         {
             return products.Where(product => product.Title.Contains(titlePart) 
